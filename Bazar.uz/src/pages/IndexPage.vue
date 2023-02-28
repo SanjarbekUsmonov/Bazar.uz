@@ -1,7 +1,7 @@
 <template>
   <div>
     <section>
-      <div class="container">
+      <div class="container bg-grey-2">
         <carusel />
         <div class="card">
           <card />
