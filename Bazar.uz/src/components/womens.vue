@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class=" ">
-      <h3 style="font-weight: 450">Erkaklar kiyimlari...</h3>
+      <h3 style="font-weight: 450;">Ayollar kiyimi...</h3>
     </div>
     <div class="q-pa-md q-gutter-md row justify-between">
       <div class="my-card" v-for="card in 8" :key="card">
@@ -26,14 +26,7 @@
         </div>
         <div>
           <q-btn flat round icon="event" />
-          <q-btn
-            color="indigo-10"
-            no-caps
-            text-color="white"
-            rounded
-            glossy
-            label="Sotib olish"
-          />
+          <q-btn color="indigo-10" no-caps text-color="white" rounded glossy label="Sotib olish"/>
         </div>
       </div>
     </div>
