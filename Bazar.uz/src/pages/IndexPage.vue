@@ -1,10 +1,10 @@
 <template>
   <div>
     <section>
-      <div class="container bg-grey-2">
+      <div class="container">
         <carusel />
         <div>
-          <card />
+          <boys />
         </div>
         <div class="clothes q-pa-md">
           <q-img style="cursor: pointer;"
@@ -28,12 +28,12 @@
 </template>
 
 <script>
-import Card from "../components/card";
+import Boys from "../components/boys";
 import carusel from "../components/carusel";
 import Smartphones from "../components/smartphones";
 import Womens from "../components/womens";
 export default {
-  components: { carusel, Card, Smartphones, Womens },
+  components: { carusel, Boys, Smartphones, Womens },
   name: "IndexPage",
 };
 </script>
@@ -42,7 +42,7 @@ export default {
 .container {
   width: 90%;
   height: auto;
-  /* background: rgb(207, 205, 205); */
   margin: 0 auto;
+  background: rgb(255, 255, 255);
 }
 </style>

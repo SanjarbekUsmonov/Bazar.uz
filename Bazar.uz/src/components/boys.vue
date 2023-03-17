@@ -1,19 +1,20 @@
 <template>
   <div>
     <div class=" ">
-      <h3 style="font-weight: 450;">Smartfonlar...</h3>
+      <h3 style="font-weight: 450">Erkaklar kiyimlari...</h3>
     </div>
-    <card/>
+      <card/>
   </div>
 </template>
 
 <script>
-import card from "../components/card"
+import card from './card.vue';
 export default {
-  components:{card}
+  components: { card },
 
 };
 </script>
 
 <style lang="css" scoped>
+
 </style>

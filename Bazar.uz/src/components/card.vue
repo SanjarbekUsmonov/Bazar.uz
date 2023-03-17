@@ -1,8 +1,4 @@
 <template>
-  <div>
-    <div class=" ">
-      <h3 style="font-weight: 450">Erkaklar kiyimlari...</h3>
-    </div>
     <div class="q-pa-md q-gutter-md row justify-between">
       <div class="my-card" v-for="card in 8" :key="card">
         <q-img
@@ -27,6 +23,7 @@
         <div>
           <q-btn flat round icon="event" />
           <q-btn
+            size=12px
             color="indigo-10"
             no-caps
             text-color="white"
@@ -37,19 +34,17 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
 import { ref } from "vue";
-
-export default {
-  setup() {
+  export default {
+    setup() {
     return {
       stars: ref(4),
     };
   },
-};
+  }
 </script>
 
 <style lang="css" scoped>
