@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class=" ">
+    <div >
       <h3 style="font-weight: 450">Erkaklar kiyimlari...</h3>
     </div>
       <card/>
