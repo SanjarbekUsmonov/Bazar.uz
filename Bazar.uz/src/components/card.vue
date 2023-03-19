@@ -1,5 +1,5 @@
 <template>
-    <div class="q-pa-md q-gutter-md row justify-between">
+    <div class="q-gutter-md row justify-between">
       <div class="my-card" v-for="card in 8" :key="card">
         <q-img
           style="height: 250px"
@@ -56,8 +56,8 @@ import { ref } from "vue";
   background: rgb(255, 255, 255);
 }
 .my-card:hover{
-  -webkit-box-shadow: -4px 5px 24px -10px rgba(34, 60, 80, 0.2);
-  -moz-box-shadow: -4px 5px 24px -10px rgba(34, 60, 80, 0.2);
-  box-shadow: -4px 5px 24px -10px rgba(34, 60, 80, 0.2);
+  -webkit-box-shadow: -4px 5px 40px -10px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: -4px 5px 40px -10px rgba(34, 60, 80, 0.2);
+  box-shadow: -4px 5px 40px -10px rgba(34, 60, 80, 0.2);
 }
 </style>
