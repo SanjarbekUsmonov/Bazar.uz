@@ -11,7 +11,6 @@
 import card from './card.vue';
 export default {
   components: { card },
-
 };
 </script>
 

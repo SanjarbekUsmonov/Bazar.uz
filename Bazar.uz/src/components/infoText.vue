@@ -13,13 +13,20 @@
     </div>
     <q-separator class="q-mt-md"/>
     <div class="info-amount">
-        <div>Miqdor:</div>
+        <div class="q-mt-lg">Miqdor:</div>
         <div class="info-amount-active">
-
+           <!-- bu yerga incremen va decrament -->
+        </div>
+        <div class="info-amount-cost q-mt-lg">
+          Narx:
+          <div class="info-amount-cost-active text-h6">
+            dan 510 000 so'm
+          </div>
         </div>
     </div>
-    <div class="info-btn">
-
+    <div class="info-btn q-mt-xl">
+      <q-btn color="primary" glossy label="Savatga qo'shish" padding="10px 70px" />
+      <q-btn color="white" glossy text-color="black" label="Darhol sotib olish" padding="10px 70px"  class="q-ml-md"/>
     </div>
   </div>
 </template>
@@ -31,5 +38,9 @@
 </script>
 
 <style lang="scss" scoped>
-
+.info-amount-active{
+  width: 120px;
+  height: 40px;
+  background: black;
+}
 </style>
