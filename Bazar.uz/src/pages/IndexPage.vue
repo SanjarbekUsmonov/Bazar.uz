@@ -4,7 +4,7 @@
       <div class="container">
         <carusel />
         <div>
-          <boys />
+          <boys/>
         </div>
         <div class="clothes q-pa-md">
           <q-img style="cursor: pointer;"
