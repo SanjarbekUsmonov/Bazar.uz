@@ -36,15 +36,11 @@
     </div>
 </template>
 
-<script>
-import { ref } from "vue";
-  export default {
-    setup() {
-    return {
-      stars: ref(4),
-    };
-  },
-  }
+<script setup>
+import { ref } from "vue"
+const stars = ref(4)
+const props = defineProps({products: Array,})
+
 </script>
 
 <style lang="css" scoped>
