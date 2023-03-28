@@ -2,9 +2,9 @@
   <div>
     <section>
       <div class="container">
-        <carusel />
+        <carusel/>
         <div>
-          <boys/>
+          <boys />
         </div>
         <div class="clothes q-pa-md">
           <q-img style="cursor: pointer;"
@@ -27,15 +27,14 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import Boys from "../components/boys";
 import carusel from "../components/carusel";
 import Smartphones from "../components/smartphones";
 import Womens from "../components/womens";
-export default {
-  components: { carusel, Boys, Smartphones, Womens },
-  name: "IndexPage",
-};
+import {useCounterStore} from "src/stores/index"
+const store = useCounterStore()
+store.GETAPI()
 </script>
 
 <style lang="css" scoped>
