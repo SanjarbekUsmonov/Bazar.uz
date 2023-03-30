@@ -3,16 +3,14 @@
     <div class=" ">
       <h3 style="font-weight: 450;">Ayollar kiyimi...</h3>
     </div>
-    <card/>
+    <card :products="store.womens"/>
   </div>
 </template>
 
-<script>
-import card from "./card.vue"
-export default {
-  components: { card }
-
-};
+<script setup>
+import card from './card.vue';
+import {useCounterStore} from "src/stores/index"
+const store = useCounterStore()
 </script>
 
 <style lang="css" scoped>
