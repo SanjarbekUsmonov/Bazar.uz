@@ -12,25 +12,25 @@
       @mouseenter="autoplay = false"
       @mouseleave="autoplay = true"
     >
-      <q-carousel-slide :name="1" img-src= https://images.uzum.uz/cfrnt27hj8j9g698agv0/main_page_banner.jpg />
-      <q-carousel-slide :name="2" img-src="https://cdn.quasar.dev/img/parallax1.jpg" />
-      <q-carousel-slide :name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg" />
-      <q-carousel-slide :name="4" img-src="https://cdn.quasar.dev/img/quasar.jpg" />
+      <q-carousel-slide
+        v-for="slide,index in store.category"
+        :key="index"
+        :name="index + 1"
+        :img-src='slide.img'/>
+
     </q-carousel>
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue'
+import { useCounterStore } from 'src/stores/index'
+const store = useCounterStore()
 
-export default {
-  setup () {
-    return {
-      slide: ref(1),
-      autoplay: ref(true)
-    }
-  }
-}
+let slide = ref(1)
+let autoplay = ref(true)
+
+
 </script>
 <style>
 
