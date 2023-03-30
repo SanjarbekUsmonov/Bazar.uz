@@ -5,17 +5,26 @@ import axios from 'axios'
 
 export const useCounterStore = defineStore('store', {
   state: () => ({
-    counter: 0,
-    category: []
+   category: [],
+   boys:[],
+   womens:[],
+   childern:[],
+   smartphones:[]
   }),
   getters: {
-    doubleCount: (state) => state.counter * 2,
+
   },
   actions: {
     async GETAPI() {
       let apiInfo = await axios.get("http://bazarcom.pythonanywhere.com/category/")
         this.category = apiInfo.data
-        console.log(this.category)
+        console.log(this.category);
+        this.boys = this.category[0].products
+        this.womens = this.category[1].products
+        this.childern = this.category[2].products
+        this.smartphones = this.category[3].products
+
+        console.log(this.boys)
     }
   },
 });

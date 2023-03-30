@@ -22,6 +22,9 @@
         <div>
           <womens />
         </div>
+        <div>
+          <childern/>
+        </div>
       </div>
     </section>
   </div>
@@ -33,6 +36,7 @@ import carusel from "../components/carusel";
 import Smartphones from "../components/smartphones";
 import Womens from "../components/womens";
 import {useCounterStore} from "src/stores/index"
+import Childern from "../components/childern";
 const store = useCounterStore()
 store.GETAPI()
 </script>
