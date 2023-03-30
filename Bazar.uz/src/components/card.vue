@@ -1,28 +1,28 @@
 <template>
     <div class="q-gutter-md row justify-between">
-      <div class="my-card" v-for="card in 8" :key="card">
+      <div class="my-card" v-for="card in props.products" :key="card">
         <q-img
           style="height: 250px"
-          src="https://images.uzum.uz/cdhmbn70tgqvlm599ih0/t_product_540_high.jpg#1679046057219"
+          :src="card.img"
         />
 
         <div>
           <div class="row no-wrap items-center">
-            <div class="col text-h6 ellipsis">Cafe Basilico</div>
+            <div class="col text-h6 ellipsis">{{ card.name }}</div>
           </div>
 
-          <q-rating v-model="stars" :max="5" size="22px" />
+          <q-rating v-model="stars" :max="5" size="22px"/>
         </div>
 
         <div class="q-pt-none">
-          <div  class="q-mt-md" style="font-weight: 600;">249 000 so'm</div>
+          <div  class="q-mt-md" style="font-weight: 600;">{{ card.prince }}</div>
           <div class="text-caption text-grey">
-            Small plates, salads & sandwiches in an intimate setting.
+           {{ card.info }}
           </div>
         </div>
         <div>
           <q-btn flat round icon="event" />
-          <q-btn
+          <!-- <q-btn
             size=12px
             color="blue-grey-1"
             no-caps
@@ -30,7 +30,7 @@
             rounded
             glossy
             label="Sotib olish"
-          />
+          /> -->
         </div>
       </div>
     </div>
@@ -38,6 +38,8 @@
 
 <script setup>
 import { ref } from "vue"
+import {useCounterStore} from "src/stores/index"
+const store = useCounterStore()
 const stars = ref(4)
 const props = defineProps({products: Array,})
 
