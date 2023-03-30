@@ -3,7 +3,7 @@
     <div >
       <h3 style="font-weight: 450">Erkaklar kiyimlari...</h3>
     </div>
-      <card :products="store.category"/>
+      <card :products="store.boys"/>
   </div>
 </template>
 
