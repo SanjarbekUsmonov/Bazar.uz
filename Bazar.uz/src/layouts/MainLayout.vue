@@ -32,7 +32,11 @@
   </q-layout>
 </template>
 
-<script>
+<script setup>
+import { ref } from "vue";
+
+
+let search = ref('')
 
 </script>
 <style scoped>
