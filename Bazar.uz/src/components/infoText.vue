@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <div class="info-text text-h5 text-weight-medium">
-      Palov qozoni Kukmara shisha va shisha bo'lmagan qopqoqli, granit Ultra (moviy) liniyasi
+  <div v-if=" props.product != undefined " >
+      <div class="info-text text-h5 text-weight-medium">
+      {{ props.product.name }}
     </div>
     <div class="info-data q-mt-md">
         <div>
-          <span >Sotuvchi:</span> <span class="q-ml-xl">kukmara</span>
+          <span >Sotuvchi:</span> <span class="q-ml-xl">Nomalum</span>
         </div>
         <div>
           <span>Yetkazib berish:</span> <span>1 kun, bepul</span>
@@ -15,12 +15,12 @@
     <div class="info-amount">
         <div class="q-mt-lg">Miqdor:</div>
         <div class="info-amount-active">
-           <!-- bu yerga incremen va decrament -->
+
         </div>
         <div class="info-amount-cost q-mt-lg">
-          Narx:
+          Narx: {{ props.product.prince }} so'm
           <div class="info-amount-cost-active text-h6">
-            dan 510 000 so'm
+            5 tasi - {{ props.product.prince * 5 }} so'm
           </div>
         </div>
     </div>
@@ -31,10 +31,12 @@
   </div>
 </template>
 
-<script>
-  export default {
+<script setup>
+import {useCounterStore} from "src/stores/index"
+const store = useCounterStore()
+const props = defineProps({product: Object})
 
-  }
+
 </script>
 
 <style lang="scss" scoped>
