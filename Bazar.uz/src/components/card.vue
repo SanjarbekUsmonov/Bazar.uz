@@ -1,11 +1,12 @@
 <template>
     <div class="q-gutter-md row justify-between">
-      <div class="my-card" v-for="card in props.products" :key="card">
+      <router-link :to="'/p/'+ card.id" class="my-card" v-for="card in props.products" :key="card">
         <q-img
           style="height: 250px"
           :src="card.img"
         />
 
+       <div class="q-pa-md">
         <div>
           <div class="row no-wrap items-center">
             <div class="col text-h6 ellipsis">{{ card.name }}</div>
@@ -32,7 +33,8 @@
             label="Sotib olish"
           /> -->
         </div>
-      </div>
+       </div>
+      </router-link>
     </div>
 </template>
 
@@ -57,5 +59,9 @@ const props = defineProps({products: Array,})
   -webkit-box-shadow: -4px 5px 40px -10px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: -4px 5px 40px -10px rgba(34, 60, 80, 0.2);
   box-shadow: -4px 5px 40px -10px rgba(34, 60, 80, 0.2);
+}
+a{
+  text-decoration: none;
+  color: black;
 }
 </style>
