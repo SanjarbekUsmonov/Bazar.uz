@@ -2,27 +2,35 @@
   <div>
       <div class="container q-pt-md row justify-between">
           <div class="carusel">
-            <info-carusel/>
+            <info-carusel :product = "product"/>
           </div>
           <div class="info">
-            <info-text/>
+            <info-text :product = "product" />
           </div>
       </div>
   </div>
 </template>
 
-<script>
+<script setup>
 import infoCarusel from '../components/infoCarusel'
 import infoText from '../components/infoText'
-  export default {
-  components: { infoCarusel,infoText },
-  name: "Purchase.page",
-      data() {
-        return {
+import {useRoute} from 'vue-router'
+import {useCounterStore} from "src/stores/index"
+import { ref } from 'vue'
+import axios from 'axios'
+const store = useCounterStore()
+let id = ref()
+id.value = useRoute().params.id
+// console.log(store.products);
+let product = ref(undefined)
 
-        }
-      },
-  }
+
+let get_Api_Product = async()=>{
+  let apiproduct = await axios.get("http://bazarcom.pythonanywhere.com/products/"+id.value+"/")
+  product.value = apiproduct.data
+}
+get_Api_Product()
+
 </script>
 
 <style lang="css" scoped>
