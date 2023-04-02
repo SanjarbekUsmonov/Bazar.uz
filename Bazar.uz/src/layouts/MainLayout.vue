@@ -34,7 +34,9 @@
 
 <script setup>
 import { ref } from "vue";
-
+import {useCounterStore} from "src/stores/index"
+const store = useCounterStore()
+store.GETPRODUCTS()
 
 let search = ref('')
 
