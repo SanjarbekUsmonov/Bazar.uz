@@ -9,8 +9,9 @@
 
 <script setup>
 import card from './card.vue';
-import {useCounterStore} from "src/stores/index"
+import {useCounterStore} from "src/stores/index";
 const store = useCounterStore()
+
 
 
 </script>
