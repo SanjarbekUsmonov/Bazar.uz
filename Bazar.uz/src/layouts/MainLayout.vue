@@ -6,11 +6,13 @@
       <q-toolbar>
         <q-toolbar-title class="row justify-between">
           <div class="black text-h5 text-weight-bold">Bazar uz</div>
+        <router-link to="/search" >
           <q-input class="input" v-model="search" outlined type="search" >
           <template v-slot:append>
           <q-icon name="search" />
         </template>
          </q-input>
+        </router-link>
           <q-btn flat round icon="event" color="black"/>
         </q-toolbar-title>
       </q-toolbar>
