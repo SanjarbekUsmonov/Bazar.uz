@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="section row  row  justify-center items-center content-center">
       <div class="container q-pt-md row justify-between">
           <div class="carusel">
             <info-carusel :product = "product"/>
@@ -48,5 +48,8 @@ get_Api_Product()
   width: 50%;
   height: 410px;
   /* background: yellow; */
+}
+.section{
+  height: 91vh;
 }
 </style>
