@@ -10,7 +10,8 @@ export const useCounterStore = defineStore('store', {
    womens:[],
    childern:[],
    smartphones:[],
-   products: []
+   products: [],
+   search_product: []
   }),
   getters: {
 
@@ -29,7 +30,8 @@ export const useCounterStore = defineStore('store', {
     },
     async GETPRODUCTS(){
       let apiproduct = await axios.get("http://bazarcom.pythonanywhere.com/products/")
-      this.products = apiproduct.data
+      this.products = [...apiproduct.data]
+      this.search_product = [...apiproduct.data]
     }
   },
 
