@@ -4,8 +4,8 @@
 
       <q-header reveal  bordered class=" header bg-white text-white">
       <q-toolbar>
-        <q-toolbar-title class="row justify-between">
-          <div class="black text-h5 text-weight-bold">Bazar uz</div>
+        <q-toolbar-title class="row justify-between items-center">
+          <router-link to="/" class="black text-h5 text-weight-bold">Bazar uz</router-link>
         <router-link to="/search" >
           <q-input class="input" v-model="search" outlined type="search" >
           <template v-slot:append>
@@ -35,12 +35,16 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import {useCounterStore} from "src/stores/index"
 const store = useCounterStore()
 store.GETPRODUCTS()
-
 let search = ref('')
+watch(search,()=>{
+  store.search_product = store.products.filter((product) =>{
+   return  product.name.toLowerCase().includes(search.value.toLowerCase())
+  });
+})
 
 </script>
 <style scoped>
